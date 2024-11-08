@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gojo Satoru</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("fade-in");
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const url = link.getAttribute("href");
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>SATORU Gojo</h1>
+    <img src="gojo2.jpg" alt="Gojo Satoru" class="large-image">
+    <p class="surname-text">The Honored One</p>
+    <h1>Résumer du personnage</h1>
+    <p class="white-color">Satoru Gojo est l'un des personnages les plus puissants et charismatiques de "Jujutsu Kaisen". En tant qu'enseignant à l'école d'exorcisme de Tokyo, il se distingue non seulement par ses compétences inégalées mais aussi par son approche unique et insouciante des combats contre les malédictions.</p>
+    <h1>Apparence</h1>
+    <p class="white-color">Grand et mince, avec des cheveux blancs et des yeux d’un bleu perçant souvent cachés derrière un bandeau ou des lunettes noires.</p>
+    <img src="younggojo.jpg" alt="Gojo Satoru" class="large-image">
+    <h1>Personalité</h1>
+    <p class="white-color">Gojo possède une personnalité complexe. Bien qu'il puisse sembler insouciant et arrogant, cette attitude cache un dévouement profond pour ses amis et ses élèves. Il est connu pour son humour unique et son attitude décontractée, tout en étant extrêmement protecteur envers ceux qu'il considère comme ses proches.</p>
+    <img src="gojo3.jpg" alt="Gojo Satoru" class="large-image">
+    <h1>Pouvoir</h1>
+    <p class="white-color">Gojo est sans conteste l'un des sorciers les plus puissants. Il maîtrise le "Mugen" (Infini), créant une barrière d’énergie maudite entre lui et ses ennemis, rendant toute attaque inefficace. Sa technique "Rikugan" (Sixième Sens) lui permet de percevoir et manipuler l’énergie maudite à un niveau microscopique, offrant une précision et une puissance inégalées. Il possède aussi le "Sixième Œil", une technique rare qui améliore sa perception et son contrôle de l'énergie maudite à un niveau extraordinaire. Ses techniques occultes incluent les "Équations Rouge, Bleu et Violet" ainsi que la "Domaine Expansion" appelée "Sans Limites" qui plonge ses adversaires dans un état où ils sont submergés d'informations infinies, les paralysant de terreur et de confusion.</p>
+    <img src="violet.jpg" alt="Gojo Satoru" class="large-image">
+    <h1>Combats (only anime)</h1>
+    <p><a href="https://www.youtube.com/watch?v=0tFr9rSrKZ0">Gojo VS Sukuna (first fight in anime)</a></p>
+    <p><a href="https://www.youtube.com/watch?v=OBrDE0WyAP4">Gojo VS Jogo (first fight)</a></p>
+    <p><a href="https://www.youtube.com/watch?v=oFTOQtxa6vc">Gojo fight in Shibuya(first part)</a></p>
+    <p><a href="https://www.youtube.com/watch?v=7Aw8iCZnOWQ">Gojo fight in Shibuya(second part)</a></p>
+    <a href="index.html">Retour à l'accueil</a>
+</body>
+</html>

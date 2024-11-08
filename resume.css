@@ -1,0 +1,113 @@
+/* Appliquer un fond en dégradé léger avec des animations */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1a1a1a, #303030, #202020);
+    background-size: 200% 200%;
+    animation: backgroundAnimation 10s ease infinite;
+    transition: background 0.5s ease;
+}
+
+/* Animation du fond */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Transition d'entrée et de sortie */
+.fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-out { animation: fadeOut 0.5s forwards; }
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Style pour le titre principal */
+h1 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff6a00;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Style des paragraphes */
+p.white-color {
+    color: #f0f0f0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 0 15px;
+    text-align: justify;
+}
+
+/* Style des images */
+.image {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Style des sections de titre secondaires */
+h1 + h1 {
+    font-size: 1.8em;
+    color: #ffaa33;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Style pour le lien de retour */
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffaa33;
+    font-size: 1.2em;
+    margin: 1.5rem auto;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 106, 0, 0.2);
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #ff6a00;
+    background-color: rgba(255, 106, 0, 0.4);
+}
+
+/* Alignement du texte principal et des images */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Animation du bouton de retour pour un effet de légère montée */
+.back-link {
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+}
+
+.back-link:hover {
+    top: -2px;
+}

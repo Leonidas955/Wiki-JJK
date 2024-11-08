@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen - Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anime.css"> <!-- Lien vers le CSS spécifique à anime.html -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Effet d'entrée
+            document.body.classList.add("fade-in");
+
+            // Effet de sortie
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const url = link.getAttribute("href");
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Jujutsu Kaisen - Anime</h1>
+
+    <!-- Lien de retour à l'accueil stylisé comme un bouton -->
+    <a href="index.html" class="back-link">Retour à l'accueil</a> 
+
+    <!-- Conteneur pour la saison 1 -->
+    <div class="season-container">
+        <h2>Saison 1</h2>
+        <a href="https://anime-sama.fr/catalogue/jujutsu-kaisen/saison1/vostfr">
+            <img src="saison1.jpg" alt="Saison 1" class="animated-border">
+        </a>
+    </div>
+
+    <!-- Conteneur pour la saison 2 -->
+    <div class="season-container">
+        <h2>Saison 2</h2>
+        <a href="https://anime-sama.fr/catalogue/jujutsu-kaisen/saison2/vostfr">
+            <img src="saison2.jpg" alt="Saison 2" class="animated-border">
+        </a>
+    </div>
+
+    <!-- Conteneur pour le film -->
+    <div class="season-container">
+        <h2>Film Jujutsu Kaisen 0</h2>
+        <a href="https://anime-sama.fr/catalogue/jujutsu-kaisen/film/vostfr">
+            <img src="film.jpg" alt="Film Jujutsu Kaisen 0" class="animated-border">
+        </a>
+    </div>
+</body>
+</html>

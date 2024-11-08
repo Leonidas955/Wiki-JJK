@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Manga</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Effet d'entrée
+            document.body.classList.add("fade-in");
+
+            // Effet de sortie
+            const links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const url = link.getAttribute("href");
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Le Manga</h1>
+    <p class="white-color">Bienvenue sur la page Manga ! Ce sont tous les mangas jujutsu kaisen disponible en Français que vous pouvez acheter !</p>
+    <p><a href="https://anime-sama.fr/catalogue/jujutsu-kaisen/scan/vf/">Où pour les flemmards vous pouvez les lire en depuis votre écran en cliquant !</a></p>
+    <a href="index.html" class="back-button">Retour à l'accueil</a> <!-- Lien de retour à l'accueil -->
+
+    <div class="image-grid">
+        <!-- Les 26 emplacements pour les images avec les liens -->
+        <a href="https://www.fnac.com/a13634748/Jujutsu-Kaisen-Tome-01-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome1.jpg" alt="Image 1">
+        </a>
+        <a href="https://www.fnac.com/a13634749/Jujutsu-Kaisen-Tome-2-Jujutsu-Kaisen-T02-Gege-Akutami">
+            <img src="tome2.jpg" alt="Image 2">
+        </a>
+        <a href="https://www.fnac.com/a13940241/Jujutsu-Kaisen-Tome-03-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome3.jpg" alt="Image 3">
+        </a>
+        <a href="https://www.fnac.com/a13940242/Jujutsu-Kaisen-Tome-04-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome4.jpg" alt="Image 4">
+        </a>
+        <a href="https://www.fnac.com/a13940243/Jujutsu-Kaisen-Tome-05-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome5.jpg" alt="Image 5">
+        </a>
+        <a href="https://www.fnac.com/a13940244/Jujutsu-Kaisen-Tome-06-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome6.jpg" alt="Image 6">
+        </a>
+        <a href="https://www.fnac.com/a15030600/Jujutsu-Kaisen-Tome-07-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome7.jpg" alt="Image 7">
+        </a>
+        <a href="https://www.fnac.com/a15030601/Jujutsu-Kaisen-Tome-08-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome8.jpg" alt="Image 8">
+        </a>
+        <a href="https://www.fnac.com/a15030602/Jujutsu-Kaisen-Tome-09-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome9.jpg" alt="Image 9">
+        </a>
+        <a href="https://www.fnac.com/a15030603/Jujutsu-Kaisen-Tome-10-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome10.jpg" alt="Image 10">
+        </a>
+        <a href="https://www.fnac.com/a15030604/Jujutsu-Kaisen-Tome-11-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome11.jpg" alt="Image 11">
+        </a>
+        <a href="https://www.fnac.com/a15030605/Jujutsu-Kaisen-Tome-12-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome12.jpg" alt="Image 12">
+        </a>
+        <a href="https://www.fnac.com/a16145114/Jujutsu-Kaisen-Tome-13-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome13.jpg" alt="Image 13">
+        </a>
+        <a href="https://www.fnac.com/a16145115/Jujutsu-Kaisen-Tome-14-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome14.jpg" alt="Image 14">
+        </a>
+        <a href="https://www.fnac.com/a16145116/Jujutsu-Kaisen-Tome-15-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome15.jpg" alt="Image 15">
+        </a>
+        <a href="https://www.fnac.com/a16647692/Jujutsu-Kaisen-Tome-16-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome16.jpg" alt="Image 16">
+        </a>
+        <a href="https://www.fnac.com/a16647693/Jujutsu-Kaisen-Tome-17-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome17.jpg" alt="Image 17">
+        </a>
+        <a href="https://www.fnac.com/a17450064/Jujutsu-Kaisen-Tome-18-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome18.jpg" alt="Image 18">
+        </a>
+        <a href="https://www.fnac.com/a17651035/Jujutsu-Kaisen-Tome-19-Jujutsu-Kaisen-Gege-Akutami">
+            <img src="tome19.jpg" alt="Image 19">
+        </a>
+        <a href="https://www.fnac.com/a17869564/Jujutsu-Kaisen-Tome-20-Jujutsu-Kaisen-Gege-Akutami#int=S:Suggestion|FA%3ALIV|1|17869564|BL1|L1">
+            <img src="tome20.jpg" alt="Image 20">
+        </a>
+        <a href="https://www.fnac.com/a18286458/Jujutsu-Kaisen-Jujutsu-Kaisen-T21-Gege-Akutami#int=S:Suggestion|FA%3ALIV|1|18286458|BL1|L1">
+            <img src="tome21.jpg" alt="Image 21">
+        </a>
+        <a href="https://www.fnac.com/a18784830/Jujutsu-Kaisen-Jujutsu-Kaisen-T22-Gege-Akutami#int=S:Suggestion|FA%3ALIV|1|18784830|BL5|L1">
+            <img src="tome22.jpg" alt="Image 22">
+        </a>
+        <a href="https://www.fnac.com/a19340260/Jujutsu-Kaisen-Jujutsu-Kaisen-T23-Gege-Akutami">
+            <img src="tome23.jpg" alt="Image 23">
+        </a>
+        <a href="https://www.fnac.com/a19928964/Jujutsu-Kaisen-Jujutsu-Kaisen-T24-Gege-Akutami">
+            <img src="tome24.jpg" alt="Image 24">
+        </a>
+        <a href="https://www.fnac.com/a20657700/Jujutsu-Kaisen-Jujutsu-Kaisen-T25-Gege-Akutami#int=S:Suggestion|FA%3ALIV|1|20657700|BL3|L1">
+            <img src="tome25.jpg" alt="Image 25">
+        </a>
+        <a href="https://www.fnac.com/livre-numerique/a20931346/Gege-Akutami-Jujutsu-Kaisen-Vol-26#FORMAT=ebook%20(ePub%20illustr%C3%A9)">
+            <img src="tome26.jpg" alt="Image 26">
+        </a>
+    </div>
+</body>
+</html>

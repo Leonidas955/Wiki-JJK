@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.season-container {
+    margin: 20px 0;
+}
+
+.animated-border {
+    width: 300px; /* Ajustez la taille des images selon vos besoins */
+    height: auto;
+    border: 5px solid transparent; /* Bordure transparente par défaut */
+    border-radius: 8px; /* Coins arrondis pour un style plus doux */
+    transition: transform 0.3s; /* Transition pour l'effet de zoom */
+    animation: borderAnimation 2s infinite; /* Animation de la bordure */
+}
+
+.animated-border:hover {
+    transform: scale(1.05); /* Effet de zoom lors du survol */
+}
+
+/* Animation de la bordure */
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: darkred;
+    }
+    50% {
+        border-color: firebrick;
+    }
+    75% {
+        border-color: crimson;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+/* Style pour le bouton de retour */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white; /* Couleur du texte */
+    background-color: #007BFF; /* Couleur de fond du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition pour l'effet au survol */
+}
+
+.back-link:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}

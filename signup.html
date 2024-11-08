@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    <link rel="stylesheet" href="login-signup.css"> <!-- Inclure CSS spécifique -->
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Créer un compte</h1>
+
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Créer un compte</button>
+        </form>
+
+        <p>Vous avez déjà un compte ? <a href="login.html">Se connecter</a></p>
+    </div>
+
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (localStorage.getItem(username)) {
+                alert("Ce nom d'utilisateur est déjà pris.");
+                return;
+            }
+
+            const user = { username: username, password: password };
+            localStorage.setItem(username, JSON.stringify(user));
+
+            alert("Compte créé avec succès !");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

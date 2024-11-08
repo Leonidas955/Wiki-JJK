@@ -1,0 +1,76 @@
+/* powers.css */
+
+/* Généralités */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content-container {
+    background-color: rgba(0, 0, 0, 0.6);  /* Fond semi-transparent */
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.intro {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.back-link:hover {
+    background-color: #2980b9;
+}

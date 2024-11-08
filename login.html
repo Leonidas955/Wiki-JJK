@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+    <link rel="stylesheet" href="login-signup.css"> <!-- Inclure CSS spécifique -->
+</head>
+<body>
+    <div class="login-container">
+        <h1>Se connecter</h1>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <p>Pas encore de compte ? <a href="signup.html">Créer un compte</a></p>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const savedUserData = localStorage.getItem(username);
+
+            if (savedUserData) {
+                try {
+                    const savedUser = JSON.parse(savedUserData);
+                    if (savedUser.password === password) {
+                        sessionStorage.setItem("loggedIn", "true");
+                        sessionStorage.setItem("currentUser", username);
+                        alert("Connexion réussie !");
+                        window.location.href = "index.html";
+                    } else {
+                        alert("Mot de passe incorrect.");
+                    }
+                } catch (error) {
+                    alert("Erreur lors de la récupération des données utilisateur.");
+                    console.error(error);
+                }
+            } else {
+                alert("Utilisateur non trouvé.");
+            }
+        });
+    </script>
+</body>
+</html>

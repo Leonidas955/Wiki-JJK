@@ -1,0 +1,152 @@
+/* Réinitialisation des marges et padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Texte sombre pour contraster avec le fond */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+
+    /* Dégradé animé */
+    background: linear-gradient(45deg, #ff6a00, #ffcc00, #ff00ff, #00f2fe);
+    background-size: 400% 400%; /* Taille du dégradé pour qu'il bouge */
+    animation: gradientAnimation 10s ease infinite; /* Animation de fond qui dure 10 secondes */
+}
+
+/* Animation de fond dégradé */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #ff6a00, #ffcc00, #ff00ff, #00f2fe);
+    }
+    25% {
+        background: linear-gradient(45deg, #ffcc00, #ff00ff, #00f2fe, #ff6a00);
+    }
+    50% {
+        background: linear-gradient(45deg, #ff00ff, #00f2fe, #ff6a00, #ffcc00);
+    }
+    75% {
+        background: linear-gradient(45deg, #00f2fe, #ff6a00, #ffcc00, #ff00ff);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6a00, #ffcc00, #ff00ff, #00f2fe);
+    }
+}
+
+/* Conteneur principal */
+.content-container {
+    background: rgba(255, 255, 255, 0.8); /* Fond blanc avec légère opacité */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px); /* Légère flou de fond pour un effet moderne */
+}
+
+/* Style du titre */
+h1 {
+    color: #007BFF; /* Titre bleu */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Style du texte */
+.white-color {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* Style du formulaire */
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.support-form label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.support-form textarea {
+    resize: vertical;
+}
+
+.support-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.support-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Style des liens */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animation de fondu */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-out;
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation de fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

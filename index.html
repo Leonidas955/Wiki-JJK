@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil Wiki JJK</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Vérifie si l'utilisateur est connecté
+        document.addEventListener("DOMContentLoaded", () => {
+            const loggedIn = sessionStorage.getItem("loggedIn");
+            const welcomeMessage = document.getElementById("welcome-message");
+            
+            if (!loggedIn) {
+                alert("Vous devez être connecté pour accéder à cette page.");
+                window.location.href = "login.html";  // Rediriger vers la page de connexion
+            } else {
+                const currentUser = sessionStorage.getItem("currentUser");
+                welcomeMessage.textContent = `Bienvenue, ${currentUser} !`;
+            }
+        });
+    </script>
+    <style>
+        /* Style pour l'image en haut à droite */
+        .top-right-link {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .top-right-image {
+            width: 40px; /* Ajustez la taille selon vos préférences */
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bouton de déconnexion en haut à gauche -->
+    <div style="position: absolute; top: 10px; left: 10px;">
+        <a href="logout.html">
+            <button style="padding: 10px 20px; background-color: red; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                Déconnexion
+            </button>
+        </a>
+    </div>
+
+    <!-- Lien avec image en haut à droite -->
+    <a href="https://www.paypal.com/paypalme/leonidasttv" target="_blank" class="top-right-link">
+        <img src="ppl.png" alt="Soutien Paypal" class="top-right-image">
+    </a>
+
+    <h1>Bienvenue sur le Wiki de JJK</h1>
+    
+    <!-- Message de bienvenue si connecté -->
+    <p id="welcome-message"></p>
+    
+    <!-- Banner de navigation -->
+    <div class="banner">
+        <a href="resumer.html" class="banner-item">Résumé de l'œuvre</a>
+        <a href="pouvoirs.html" class="banner-item">Explication des pouvoirs</a>
+        <a href="manga.html" class="banner-item">Le Manga</a>
+        <a href="https://discord.gg/X6dBeE4WPR" class="banner-item">Discord</a>
+        <a href="support.html" class="banner-item">Support</a>
+        <a href="anime.html" class="banner-item">Episode Anime</a>
+    </div>
+
+    <h2 class="subtitle">Votre source d'informations sur les personnages Jujutsu Kaisen</h2>
+    <p class="intro-message">Bienvenue sur le wiki "Jujutsu Kaisen" ! Ici, vous trouverez tout ce qu'il y a à savoir sur les personnages de cet univers fascinant. Que vous soyez un fan fervent ou un nouveau venu curieux, ce wiki est votre ressource ultime pour explorer les moindres détails des héros et des vilains de "Jujutsu Kaisen". Plongez-vous dans les biographies complètes, découvrez les capacités extraordinaires et les histoires captivantes de vos personnages préférés.</p>
+    <p class="intro-message">Il y a tellement de choses à découvrir ! Tu veux te lancer dans un autre personnage maintenant?</p>
+
+    <h2>Les personnages de Jujutsu Kaisen</h2>
+    <div class="image-container">
+        <a href="page1.html">
+            <img src="gojo.jpg" alt="Gojo Satoru">
+            <p class="image-caption">Gojo Satoru</p>
+        </a>
+        <a href="page2.html">
+            <img src="sukuna.jpg" alt="Ryomen Sukuna">
+            <p class="image-caption">Ryomen Sukuna</p>
+        </a>
+        <a href="page3.html">
+            <img src="toji.jpg" alt="Fushiguro Toji">
+            <p class="image-caption">Fushiguro Toji</p>
+        </a>
+        <a href="page4.html">
+            <img src="yuji.jpg" alt="Itadori Yuji">
+            <p class="image-caption">Itadori Yuji</p>
+        </a>
+    </div>
+
+    <div class="image-container">
+        <a href="page5.html">
+            <img src="kenjaku.jpg" alt="Kenjaku">
+            <p class="image-caption">Kenjaku</p>
+        </a>
+        <a href="page6.html">
+            <img src="megumi.jpg" alt="Fushiguro Megumi">
+            <p class="image-caption">Fushiguro Megumi</p>
+        </a>
+        <a href="page7.html">
+            <img src="kashimo.jpg" alt="Hajime Kashimo">
+            <p class="image-caption">Hajime Kashimo</p>
+        </a>
+        <a href="page8.html">
+            <img src="nanami.jpg" alt="Kento Nanami">
+            <p class="image-caption">Kento Nanami</p>
+        </a>
+    </div>
+
+    <div class="image-container">
+        <a href="page9.html">
+            <img src="maki.jpg" alt="Maki Zenin">
+            <p class="image-caption">Maki Zenin</p>
+        </a>
+        <a href="page10.html">
+            <img src="toge.jpg" alt="Inumaki Toge">
+            <p class="image-caption">Inumaki Toge</p>
+        </a>
+        <a href="page11.html">
+            <img src="panda.jpg" alt="Panda">
+            <p class="image-caption">Panda</p>
+        </a>
+        <a href="page12.html">
+            <img src="todo.jpg" alt="Todo Aoi">
+            <p class="image-caption">Todo Aoi</p>
+        </a>
+    </div>
+
+    <div class="image-container">
+        <a href="page13.html">
+            <img src="nobara.jpg" alt="Nobara Kugisaki">
+            <p class="image-caption">Nobara Kugisaki</p>
+        </a>
+    </div>
+
+</body>
+</html>
